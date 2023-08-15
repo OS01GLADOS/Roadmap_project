@@ -1,0 +1,47 @@
+ls
+allias / unallias
+pwd
+cd
+cp
+rm
+mv
+mkdir
+man
+touch
+chmod
+chown
+./
+exit
+sudo
+shutdown
+top / htop
+zip / unzip
+apt / yum / pacman
+echo
+cat
+ps
+kill
+ping
+vim
+history
+passwd
+which
+shred
+less
+tail
+head
+grep
+whoami
+whatis
+wc
+uname
+find
+wget
+locate
+df
+du
+diff
+tar
+hostname
+useradd, userdel
+
