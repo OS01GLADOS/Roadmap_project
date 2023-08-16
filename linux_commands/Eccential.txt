@@ -1,20 +1,21 @@
-ls
-allias / unallias
-pwd
-cd
-cp
-rm
-mv
-mkdir
-man
-touch
-chmod
-chown
-./
-exit
-sudo
-shutdown
-top / htop
+ls   - list all file
+allias / unallias  - add/remove allias for command
+pwd   -  prints current workpath
+cd    - change directory
+cp    - copy (-R to copy dirs)
+rm    - remove (-r for dirs)
+mv    - move (can be used to rename)
+mkdir     - create dir (-p to create subdirs)
+man		- documentation (user manual)
+touch		- create, change and modify timestamps of a file.
+chmod		- change mode (use to execute files as .sh)
+chown		- change owner
+chgrp		- change group
+./		- run executable from terminal
+exit		- exit shell
+sudo			- provides doot) access (Super User DO)
+shutdown		- shutdown pc (-c to cancel)
+top / htop		- show usage of pc (load average shows performance in cores, 1 for 1  core )
 zip / unzip
 apt / yum / pacman
 echo
@@ -44,4 +45,6 @@ diff
 tar
 hostname
 useradd, userdel
-
+ufw
+clear
+reboot			- reboots pc, immediatly
