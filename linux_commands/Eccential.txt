@@ -1,50 +1,49 @@
-ls   - list all file
-allias / unallias  - add/remove allias for command
-pwd   -  prints current workpath
-cd    - change directory
-cp    - copy (-R to copy dirs)
-rm    - remove (-r for dirs)
-mv    - move (can be used to rename)
-mkdir     - create dir (-p to create subdirs)
-man		- documentation (user manual)
-touch		- create, change and modify timestamps of a file.
-chmod		- change mode (use to execute files as .sh)
-chown		- change owner
-chgrp		- change group
-./		- run executable from terminal
-exit		- exit shell
+ls   			- list all file
+allias / unallias  	- add/remove allias for command
+pwd   			- prints current workpath
+cd    			- change directory
+cp    			- copy (-R to copy dirs)
+rm    			- remove (-r for dirs)
+mv    			- move (can be used to rename)
+mkdir   		- create dir (-p to create subdirs)
+man			- documentation (user manual)
+touch			- create, change and modify timestamps of a file.
+chmod			- change mode (use to execute files as .sh)
+chown			- change owner
+chgrp			- change group
+./			- run executable from terminal
+exit			- exit shell
 sudo			- provides doot) access (Super User DO)
 shutdown		- shutdown pc (-c to cancel)
-top / htop		- show usage of pc (load average shows performance in cores, 1 for 1  core )
-zip / unzip
-apt / yum / pacman
-echo
-cat
-ps
-kill
-ping
-vim
-history
-passwd
-which
-shred
-less
-tail
-head
-grep
-whoami
-whatis
-wc
-uname
-find
-wget
-locate
-df
-du
-diff
-tar
-hostname
-useradd, userdel
-ufw
-clear
+top / htop		- show usage of pc (load average showsgrep performance in cores, 1 for 1  core )
+zip / unzip		- create archive and unzip zip archive
+apt / yum / pacman	- set of command tool (apt-get to install)
+echo			- display a line of text
+cat			- showing file content
+ps			- report a snapshot of the current processes.
+kill			- terminates processes manually
+ping			- send ICMP ECHO_REQUEST to network hosts
+vim			- open VIM
+history			- view previously executed command
+passwd			- change user's passwords
+which			- locates command (-a for all)
+shred			- overwrite a file to hide its contents, and optionally delete it
+less			- utility that can be used to read the contents of a text fgrepile one page (one screen) at a time.
+tail			- outputs last part of file 
+head			- outputs first part of file
+grep			- search in file/files
+whoami			- show currently logged-in user
+whatis			- display one-line manual page descriptions
+wc			- print word count in file (-w for word -m for chars -l for lines)
+uname			- print system information
+find			- find file and directories
+wget			- download files from web -P for path for download -O to rename file -i for files with links
+df			- info about file system (total space available)
+du			- show disk usage (-a to show size of folders) -b for size in bytes -k for kilobytes -m for megabytes
+diff			- show difference in files
+tar			- archive util: -c for create -x for extract -C to select path to extract
+hostname		- get or set hostname
+useradd, userdel	- create user (-M to create without home directory)
+ufw			- command for managin firewall
+clear			- clear console
 reboot			- reboots pc, immediatly
