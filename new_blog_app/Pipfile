@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+
+[dev-packages]
+pre-commit = "*"
+black = "*"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+debug = "python manage.py runserver 1213"
