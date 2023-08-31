@@ -15,3 +15,5 @@ python_version = "3.11"
 
 [scripts]
 debug = "python manage.py runserver 1213"
+startapp = "python manage.py startapp"
+manage = "python manage.py"
