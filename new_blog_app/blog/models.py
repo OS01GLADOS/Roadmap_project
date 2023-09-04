@@ -12,10 +12,11 @@ class Author(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=80, null=False, blank=False)
-    text = models.CharField(max_length=80, null=False, blank=False)
+    text = models.CharField(max_length=8000, null=False, blank=False)
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
+        related_name="author_posts",
     )
     is_published = models.BooleanField(default=False)
     is_blocked = models.BooleanField(default=False)

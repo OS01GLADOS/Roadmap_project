@@ -1,9 +1,14 @@
 from django.contrib import admin
 
-# Register your models here.
-from blog.models import Author
+
+from blog.models import Author, Post
 
 
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
     pass
