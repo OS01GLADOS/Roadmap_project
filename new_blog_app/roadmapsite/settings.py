@@ -51,12 +51,32 @@ INSTALLED_APPS = CORE_APPS + USER_APPS + THIRD_PARTY_APPS
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.middleware.cache.FetchFromCacheMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# per-site cache
+# which cache alias to use
+CACHE_MIDDLEWARE_ALIAS = "default"
+# number of seconds to cache a page for (TTL)
+CACHE_MIDDLEWARE_SECONDS = 600
+# should be used if the cache is shared across
+# multiple sites that use the same Django instance
+CACHE_MIDDLEWARE_KEY_PREFIX = ""
+
+# its default caching
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "unique-snowflake",
+    }
+}
+
 
 ROOT_URLCONF = "roadmapsite.urls"
 

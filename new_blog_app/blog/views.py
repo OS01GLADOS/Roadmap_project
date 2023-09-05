@@ -4,6 +4,7 @@ from django.views.generic import ListView
 from django.contrib.auth import login, authenticate, logout
 from blog.forms import SignupForm, PostCreateForm, LoginForm
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import cache_page
 
 
 class AuthorListView(ListView):
@@ -60,6 +61,7 @@ def logout_view(request):
         return redirect("index")
 
 
+@cache_page(60 * 15)
 @login_required(login_url="/blog/login")
 def post_create(request):
     if request.method == "POST":
