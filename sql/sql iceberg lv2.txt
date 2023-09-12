@@ -1,0 +1,19 @@
+- Database Connection Pool (dbcp) — это способ решения изложенной выше проблемы. Он подразумевает, что в нашем распоряжении имеется некоторый набор («пул») соединений к базе данных. Когда новый пользователь запрашивает доступ к БД, ему выдаётся уже открытое соединение из этого пула. Если все открытые соединения уже заняты, создаётся новое. Как только пользователь освобождает одно из уже существующих соединений, оно становится доступно для других пользователей. Если соединение долго не используется, оно закрывается.
+
+-DUAL никаким образом не связан с ключами или связями между двумя разными таблицами.
+DUAL - это встроенная в Oracle таблшица, которая имеет только одну единственную колонку, и была сделана специально как таблица для внутренних представлений. Ранее в Oracle нельзя было брать значения "ниоткуда", теперь - можно (фактически при подобном обращений мы обращаемся к нашей таблице DUAL).
+Из Википедии:
+Таблица DUAL это специальная таблица с одной колонкой, которая представляется как дефолтная (базовая) таблица в базах данных Oracle. Она используется для выборки псевдоколонки, такой как SYSDATE или USER. По-умолчанию в таблице содержится колонка с именем DUMMY, в которой содержится значение "X".
+
+-lateral join 
+lateral join combines two tables using a different syntax than typical joins. In a lateral join, the right-hand table is expressed as a subquery, and the join condition is specified within the WHERE clause of this subquery.
+
+-Recursive CTE Syntax
+A recursive CTE references itself. It returns the result subset, then it repeatedly (recursively) references itself, and stops when it returns all the results.
+
+-plan hints
+Hints are options or strategies specified for enforcement by the SQL Server query processor on SELECT, INSERT, UPDATE, or DELETE statements. The hints override any execution plan the query optimizer might select for a query.
+
+-MVCC (англ. multiversion concurrency control — управление параллельным доступом посредством многоверсионности) — один из механизмов СУБД для обеспечения параллельного доступа к базам данных, заключающийся в предоставлении каждому пользователю так называемого «снимка» базы, обладающего тем свойством, что вносимые пользователем изменения невидимы другим пользователям до момента фиксации транзакции. Этот способ управления позволяет добиться того, что пишущие транзакции не блокируют читающих, и читающие транзакции не блокируют пишущих.
+
+
