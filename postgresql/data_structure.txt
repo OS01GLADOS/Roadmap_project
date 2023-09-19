@@ -1,0 +1,25 @@
+cluster
+ - database
+   --schema
+     ---table
+     
+why to use schema:
+ - To allow many users to use one database without interfering with each other.
+ - To organize database objects into logical groups to make them more manageable.
+ - Third-party applications can be put into separate schemas so they do not collide with the names of other objects.
+
+	CREATE SCHEMA myschema;
+
+To drop a schema if it's empty (all objects in it have been dropped), use:
+
+	DROP SCHEMA myschema;
+
+To drop a schema including all contained objects, use:
+
+	DROP SCHEMA myschema CASCADE;
+
+Often you will want to create a schema owned by someone else (since this is one of the ways to restrict the activities of your users to well-defined namespaces). The syntax for that is:
+
+CREATE SCHEMA schema_name AUTHORIZATION user_name;
+
+You can even omit the schema name, in which case the schema name will be the same as the user name. 

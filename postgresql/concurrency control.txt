@@ -1,0 +1,7 @@
+transaction isolation
+
+
+explicit locking (явные ограничения)
+
+
+
