@@ -1,0 +1,15 @@
+create backup
+pg_dump db_name > filename.sql
+
+
+restore backup
+$ psql tecmintdb < tecmintdb.sql
+
+As mentioned above, a custom-format dump is not a script for psql, so it must be restored with pg_restore as shown.
+
+$ pg_restore -d tecmintdb tecmintdb.dump
+OR
+$ pg_restore -d tecmintdb tecmintdb.tar
+OR
+$ pg_restore -d tecmintdb tecmintdumpdir	
+
