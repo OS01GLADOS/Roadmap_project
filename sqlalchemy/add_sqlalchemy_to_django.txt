@@ -1,0 +1,5 @@
+use library aldjemy
+
+! important !
+use just to make some requests faster
+for simple requests djangoORM is better
