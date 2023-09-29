@@ -5,11 +5,17 @@ from django.contrib.auth import login, authenticate, logout
 from blog.forms import SignupForm, PostCreateForm, LoginForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import cache_page
+from blog.sqlalchemy import connect_with_sql_alchemy
 
 
 class AuthorListView(ListView):
     model = Author
     template_name = "blog/author_list_view.html"
+
+    def get_queryset(self):
+        author_query = Author.objects.all().prefetch_related()
+        connect_with_sql_alchemy()
+        return author_query
 
 
 # register view
