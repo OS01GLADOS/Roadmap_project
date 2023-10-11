@@ -1,0 +1,67 @@
+to run container we should build it and then run it
+
+build:
+$ docker build -t <desired container name> .
+
+run:
+$ docker run -dp 127.0.0.1:3000:3000 getting-started
+
+The -d flag (short for --detach) runs the container in the background. 
+The -p flag (short for --publish) creates a port mapping between the host and the container. 
+The -p flag takes a string value in the format of HOST:CONTAINER, 
+where HOST is the address on the host, and CONTAINER is the port on the container. 
+The command publishes the container's port 3000 to 127.0.0.1:3000 (localhost:3000)
+ on the host. Without the port mapping, you wouldn't be able to access the application from the host.
+ --mount type=volume,src=todo-db,target=/etc/todos
+ add the --mount option to specify a volume mount. 
+ Give the volume a name, and mount it to /etc/todos in the container, which captures all files created at the path.
+ to specify network for a container
+ --network <network_name>
+ 
+ get container id:
+ $ docker ps
+ 
+ to stop container:
+ $ docker stop <the-container-id>
+
+
+ to remove container:
+ $ docker rm <the-container-id>
+ 
+ 
+ if container changed:
+ 1 build new
+ 2 stop old
+ 3 remove old
+ 4 start new
+ 
+ 
+ VOLUMES
+ Create a volume by using the docker volume create command.
+
+$ docker volume create todo-db
+
+A lot of people frequently ask "Where is Docker storing my data when I use a volume?" 
+If you want to know, you can use the  command.
+ $ docker volume inspect
+ 
+
+ BIND
+ A bind mount is another type of mount, which lets you share a directory from the host's 
+ filesystem into the container. When working on an application, you can use a bind mount 
+ to mount source code into the container. The container sees the changes you make to the 
+ code immediately, as soon as you save a file. This means that you can run processes in 
+ the container that watch for filesystem changes and respond to them.
+ 
+ --mount type=bind,src="$(pwd)",target=/src
+ 
+ logs for container.2023 14:58 	09.10.2023 15:05 	period time (0:06:52) more than expected 5 min (09/10/2023 14:58:08 - 09/10/2023 15:05:00)
+09.10.2023 18:20 	09.10.2023 18:27 	period time (0
+ docker logs -f <container-id>
+ 
+ 
+ Create the network.
+
+$ docker network create todo-app
+
+ 
