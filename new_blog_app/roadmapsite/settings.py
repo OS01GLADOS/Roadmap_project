@@ -113,7 +113,7 @@ DATABASES = {
         "NAME": "new_db",
         "USER": "djangosite",
         "PASSWORD": "1111",
-        "HOST": "localhost",
+        "HOST": "172.18.0.1",
         "PORT": "5432",
     }
 }
