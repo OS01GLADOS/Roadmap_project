@@ -1,0 +1,22 @@
+{% load static %}
+{% load cache %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roadmap Project</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap.css' %}">
+</head>
+<body class="ml-5">
+    {% cache 500 header %}
+    <div class="header">
+        <h1>Blog project</h1>
+            <button onclick="window.location.href = '{% url 'index' %}'">TO MAIN PAGE</button>
+            test
+    </div>
+    {% endcache %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
