@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <h3>All urls for the project</h3>
-    {% for data in url_list %}
-        <p><a href="{{ data }}">{{ data }}</a></p>
-    {% endfor %}
-{% endblock %}

@@ -64,4 +64,5 @@ If you want to know, you can use the  command.
 
 $ docker network create todo-app
 
+docker exec -it <container id> bash 
  
