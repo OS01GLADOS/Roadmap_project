@@ -109,12 +109,12 @@ DATABASES = {
     # },
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "OPTIONS": {"options": "-c search_path=custom_scheme"},
+        # "OPTIONS": {"options": "-c search_path=custom_scheme"},
         "NAME": "new_db",
-        "USER": "djangosite",
-        "PASSWORD": "1111",
-        "HOST": "172.18.0.1",
-        "PORT": "5433",
+        "USER": "root",
+        "PASSWORD": "postgres",
+        "HOST": "postgres",
+        "PORT": "5432",
     }
 }
 
